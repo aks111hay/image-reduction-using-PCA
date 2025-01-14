@@ -1,7 +1,3 @@
-Here’s a sample README file for your project:
-
----
-
 # PCA Image Reduction Web App
 
 This is a simple web application built with Flask, designed to perform **Principal Component Analysis (PCA)** for dimensionality reduction on uploaded images. The app allows users to upload an image, apply PCA to reduce its complexity, and download the reduced image.
