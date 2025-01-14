@@ -12,7 +12,7 @@ def pca_image_reduction(image_data, reduction_percentage):
     
     mean = np.mean(img_data, axis=0)
     centered = img_data - mean
-    covariance_matrix = np.cov(centered.T)
+    covariance_matrix = np.cov(centered.T)+mean
     
     eigenvalues, eigenvectors = np.linalg.eig(covariance_matrix)
     sorted_indices = np.argsort(eigenvalues)[::-1]
