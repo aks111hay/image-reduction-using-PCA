@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCA Image Reduction</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 110px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .upload-btn-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            font-size: 16px;
+            color: #fff;
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .upload-btn-wrapper button {
+            padding: 12px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .upload-btn-wrapper button:hover {
+            background-color: #0056b3;
+        }
+        select, input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        select {
+            margin: 10px 0;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>PCA Image Reduction</h1>
+    <p>Upload an image and choose the percentage of dimensionality reduction using PCA.</p>
+    
+    <!-- Form for file upload and PCA reduction -->
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="upload-btn-wrapper">
+            <input type="file" name="image" accept="image/*" required />
+            <button>Choose Image</button>
+        </div>
+        
+        <label for="reduction">Select PCA Reduction:</label>
+        <select name="reduction" id="reduction" required>
+            <option value="25">25%</option>
+            <option value="50">50%</option>
+            <option value="75">75%</option>
+            <option value="90">90%</option>
+            <option value="95">95%</option>
+        </select>
+
+        <br>
+        <input type="submit" value="Upload and Reduce Image" />
+    </form>
+</div>
+
+</body>
+</html>
