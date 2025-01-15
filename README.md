@@ -41,7 +41,7 @@ This is a simple web application built with Flask, designed to perform **Princip
 
 1. **Clone the Repository**:
     ```
-    git clone <repository_url>
+    git clone https://github.com/aks111hay/image-reduction-using-PCA?tab=readme-ov-file#how-pca-works
     cd pca-image-reduction
     ```
 
@@ -72,9 +72,9 @@ This is a simple web application built with Flask, designed to perform **Princip
     ```
     Make sure it includes:
     ```
-    Flask==<version>
-    Pillow==<version>
-    numpy==<version>
+    Flask==3.1.0
+    Pillow==11.0.0
+    numpy==2.2.0
     ```
 
 5. **Run the Flask App**:
